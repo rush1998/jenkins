@@ -6,9 +6,11 @@ pipeline {
                 git branch: 'main' , url: 'https://github.com/rush1998/jenkins.git'
             }
         }
-        stage('Ckeckout from GIt') {
+        stage('Terraform Version') {
             steps {
-                git branch: 'main' , url: 'https://github.com/rush1998/jenkins.git'
+                script{
+                    sh 'terraform version'
+                }
             }
         }
     }
