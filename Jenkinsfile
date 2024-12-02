@@ -27,5 +27,12 @@ pipeline {
                 }
             }
         }
+        stage('Terrafrom plan') {
+            steps {
+                script {
+                    sh 'terraform plan'
+                }
+            }
+        }
     }
 }
