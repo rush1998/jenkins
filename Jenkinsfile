@@ -41,10 +41,5 @@ pipeline {
                 }
             }
         }
-        stage('Approve To Destroy') {
-            steps {
-                input message: 'Approve to Destroy', ok: 'Destroy'
-            }
-        }
     }
 }
